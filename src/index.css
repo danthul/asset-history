@@ -3,3 +3,190 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.bc-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.bc-map {
+  height: calc(100% - 130px);
+  width: calc(100% - 305px);
+  position: relative;
+  overflow: hidden;
+}
+
+.bc-bottom-controls {
+  width: calc(100% - 305px);
+}
+
+.bc-bottom-controls {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  background: #999;
+}
+
+.bc-list-panel__brand {
+  line-height: 20px;
+  height: 45px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  background: #f2f2f2;
+  padding: 5px;
+  padding: 0.5rem;
+}
+
+.bc-list-panel__brand img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 35px;
+}
+
+.bc-list-panel__header {
+  padding: 10px;
+  -ms-flex: none;
+  flex: none;
+  background: #ccc;
+  min-height: 49px;
+}
+
+.bc-list-panel__header .bca_form-control {
+  height: 30px;
+  margin-bottom: 4px;
+}
+
+.bc-list-panel {
+  border-left: 1px solid #a6a6a6;
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.bc-list-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 305px;
+  height: 100%;
+  padding: 0;
+  border-left: 5px solid #353535;
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  transition: transform 0.25s cubic-bezier(0.44, 0.31, 0.26, 0.95);
+  will-change: transform;
+}
+
+.bc-list-panel__list {
+  background: rgba(255, 255, 255, 0.85);
+  width: 100%;
+  display: inline-block;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0px;
+}
+
+.styled-ol,
+ol.ahInfoWindow {
+  counter-reset: li;
+  margin-left: 0;
+  padding-left: 0;
+  margin: 0;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+.styled-ol > li,
+ol.ahInfoWindow > li {
+  position: relative;
+  padding: 0 0 0 3em;
+  list-style: none;
+  border-top: 2px solid #666;
+  background: #f6f6f6;
+}
+
+.styled-ol > li:before,
+ol.ahInfoWindow > li:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  box-sizing: border-box;
+  width: 3em;
+  padding: 5px 2px;
+  border-top: 2px solid #666;
+  color: #fff;
+  background: #666;
+  text-align: center;
+}
+
+.bc_lineitem {
+  padding: 5px;
+  padding: 0.5rem;
+}
+
+.bc_lineitem,
+.tds,
+.time,
+.addr,
+.warn {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.tds {
+  position: relative;
+  margin: 0 0 2px 0;
+  margin: 0 0 0.2rem 0;
+}
+
+.tds .time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.tds .bcdir.stop {
+  background: #d43f3a;
+}
+
+.tds .bcdir.go {
+  background: #4cae4c;
+}
+
+.tds .bcdir {
+  color: #fff;
+  border-radius: 2px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  padding: 0 5px;
+  padding: 0 0.5rem;
+}
+
+.tds .speedur {
+  margin-left: 2px;
+  margin-left: 0.2rem;
+}
+
+.addr {
+  margin: 2px 0;
+  margin: 0.2rem 0;
+}
